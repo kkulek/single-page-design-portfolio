@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap');
+
+:root {
+    --prime-black: #030303;
+    --prime-medium-brown: #7A746E;
+    --prime-light-cream: #FFF7F0;
+    --prime-light-red: #EB7565;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--prime-light-cream);
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.centered-copy {
+    text-align: center;
+}
+
+
+.navigation-and-footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    margin-bottom: 32px;
+}
+
+.free-consultation {
+    display: flex;
+}
+
+.free-consultation-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.amy-picture {
+    border-radius: 50%;
+}
+
+button {
+    color: white;
+    border: none;
+    border-radius: 28px;
+}
+
+.button-black {
+    background-color: var(--prime-black);
+    cursor: pointer;
+}
+
+.button-light-red {
+    background-color: var(--prime-light-red);
+    cursor: pointer;
+}
+
+h1, h2 {
+    color: var(--prime-black);
+    font-weight: 700;
+}
+
+.copy-light-cream {
+    color: var(--prime-light-cream)
+}
+
+p {
+    color: var(--prime-medium-brown)
+}
+
+
+
+.service {
+    color: white;
+    min-height: 153px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.image-services {
+    align-self: flex-end;
+}
+
+.graphic-design {
+    background-color: #755CDE;
+}
+
+.ui-ux {
+    background-color: #F6A560;
+}
+
+.apps {
+    background-color: #F39E9E;
+}
+
+.photo {
+    background-color: #61C4B7;
+}
+
+.illustrations {
+    background-color: #EB7565;
+}
+
+.motion {
+    background-color: #552049;
+}
+
+.services-grid {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    margin: 56px 0;
+
+    grid-template-areas:
+    "gdesign"
+    "uiux"
+    "apps"
+    "photo"
+    "illu"
+    "motion";
+}
+
+.graphic-design { grid-area: gdesign; }
+.ui-ux { grid-area: uiux; }
+.apps { grid-area: apps; }
+.photo { grid-area: photo; }
+.illustrations { grid-area: illu; }
+.motion { grid-area: motion; }
+
+
+@media (min-width: 375px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .services-grid {
+        grid-template-areas:
+        "gdesign gdesign"
+        "gdesign gdesign"
+        "uiux apps"
+        "illu illu"
+        "photo photo"
+        "motion motion"
+    }
+}
+
+
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .services-grid {
+        grid-template-areas:
+        "gdesign gdesign uiux apps"
+        "gdesign gdesign illu illu"
+        "photo photo motion motion"
+    }
+}
+
+
+@media (min-width: 1440px) {
+    .services-grid {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: 364px;
+    }
+
+    .services-grid {
+        grid-template-areas:
+        "gdesign gdesign uiux apps photo photo"
+        "gdesign gdesign illu illu motion motion"
+    }
+
+}
+
+
+.black-call-to-action {
+    background-color: black;
+    display: grid;
+    gap: 1.5rem;
+    margin: 56px 0;
+}
+
+.black-call-to-action-copy {
+    grid-area: copy;
+    display: flex;
+    flex-direction: column;
+}
+
+.black-call-to-action-button {
+    grid-area: button;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (min-width: 375px) {
+
+    .black-call-to-action {
+        grid-template-columns: 100%;
+        grid-template-areas:
+    "copy"
+    "button";
+        place-items: center;
+
+    }
+
+    .black-call-to-action-button {
+
+    }
+
+    .nav-spacing {
+        margin: 16px 0 32px 0;
+    }
+
+    .black-call-to-action-copy {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        padding: 48px 20px 0 20px;
+    }
+
+    .black-call-to-action-copy > h2, p {
+        padding-bottom: 24px;
+    }
+
+    .black-call-to-action-copy > h2 {
+        font-size: 26px;
+    }
+
+    .black-call-to-action-copy > p {
+        font-size: 16px;
+        padding-bottom: 0;
+    }
+
+    button {
+        width: 176px;
+        height: 44px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .hero-copy > p {
+        padding: 0 30px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .free-consultation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .free-consultation-copy {
+        align-items: center;
+        text-align: center;
+    }
+
+    .free-consultation-copy > h2, p {
+        padding-bottom: 24px;
+    }
+
+    .free-consultation-copy > h2 {
+        padding-top: 30px;
+    }
+
+    .amy-picture {
+        width: 300px;
+    }
+
+    .container {
+        padding: 0 4.25%;
+    }
+
+    .hero-copy {
+        height: 210px;
+    }
+
+    .black-call-to-action-button {
+        align-self: flex-end;
+        align-items: center;
+        margin-bottom: 48px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .black-call-to-action {
+        flex-direction: column;
+        grid-template-areas:
+        "copy"
+        "button";
+    }
+
+    .black-call-to-action-button {
+        margin-bottom: 64px;
+    }
+
+
+    .nav-spacing {
+        margin: 34px 0 66px 0;
+    }
+
+    button {
+        width: 228px;
+        height: 56px;
+    }
+
+    h1 {
+        font-size: 44px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .hero-copy > p {
+        padding: 0 50px;
+    }
+
+    .free-consultation {
+        flex-direction: row;
+        margin-left: -82px;
+    }
+
+    .free-consultation-copy {
+        align-items: flex-start;
+        text-align: left;
+        margin-left: 62px;
+    }
+
+    .amy-picture {
+        width: 364px;
+    }
+
+    .container {
+        padding: 0 5.2%;
+    }
+
+    .black-call-to-action-copy {
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+
+    .hero-copy {
+        height: 138px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .black-call-to-action-button {
+        align-self: center;
+        margin-bottom: 0;
+
+    }
+
+
+    .black-call-to-action {
+        grid-template-columns: 68% 30%;
+        margin: 56px 0;
+        grid-template-areas:
+    "copy button";
+    }
+
+    .black-call-to-action-copy {
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        padding-bottom: 48px;
+    }
+
+    .black-call-to-action-copy > p {
+        padding: 0;
+        margin: 0;
+    }
+
+    .hero-copy > p {
+        padding: 0 200px;
+    }
+
+    h1 {
+        font-size: 56px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .amy-picture {
+        width: 445px;
+    }
+
+    .free-consultation {
+        margin-left: 0;
+    }
+
+    .free-consultation-copy {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .free-consultation-copy > h2, p {
+        padding: 0 0 34px 110px;
+    }
+
+    .container {
+        padding: 0 11.455%;
+    }
+
+    .hero-copy {
+        height: 150px;
+    }
+    .free-consultation-copy .button-light-red {
+        margin-left: 110px;
+    }
+}
+
+
+.my-work {
+    margin: 40px 0;
+    height: 30vh;
+    display: inline-block;
+}
+
+.my-work > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.slider {
+    width: 2865px;
+}
+
+.img-slider {
+    margin: 0 15px;
+}
+
+
+
+
+
+
+
+
+
+
+.arrows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+}
+
+.arrow-left, .arrow-right {
+    border-radius: 50px;
+    background-color: black;
+    height: 16px;
+    width: 15px;
+    box-sizing: unset;
+    border: 25px solid black;
+    cursor: pointer;
+}
+
+.arrow-left:hover,
+.arrow-right:hover,
+.arrow-left:active,
+.arrow-right:active{
+    background-color: #755CDE;
+    border: 25px solid #755CDE;
+}
+.button-black:hover,
+.button-black:active {
+    background-color: #755CDE;
+}
+
+.button-light-red:hover,
+.button-light-red:active {
+    background-color: #F6A560;
+}
+
+@media (min-width: 375px) {
+    .img-slider {
+        height: 180px;
+        width: 270px;
+    }
+}
+
+@media (min-width: 768px) {
+    .img-slider {
+        height: 360px;
+        width: 540px;
+    }
+}
+
+@media (min-width: 1440px) {
+
+}
+
+
+
