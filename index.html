@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <title>Single-page design portfolio</title>
 </head>
 
 <body>
+
 <nav class="container navigation-and-footer-container nav-spacing">
   <img src="./assets/logo.svg" alt="logo" class="logo-img">
   <button class="button-black">Free Consultation</button>
@@ -19,6 +20,7 @@
   <h1>Design solutions made easy</h1>
   <p>With over ten years of experience in various design disciplines, I’m your one-stop shop for your design needs.</p>
 </div>
+
 <div class="container services-grid">
   <div class="service graphic-design">
     <img src="./assets/pattern-graphic-design.svg" alt="graphic design" class="image-services">
@@ -56,24 +58,47 @@
   </div>
 </div>
 
-<div class="my-work">
+<div class="container my-work">
   <h2>My Work</h2>
 
-  <div class="slider">
-    <img src="./assets/image-slide-1.jpg" alt="abstract" class="img-slider">
-    <img src="./assets/image-slide-2.jpg" alt="geometry shapes" class="img-slider">
-    <img src="./assets/image-slide-3.jpg" alt="newspaper" class="img-slider">
-    <img src="./assets/image-slide-4.jpg" alt="vinyl records" class="img-slider">
-    <img src="./assets/image-slide-5.jpg" alt="iphone in hand" class="img-slider">
-  </div>
+  <!-- Slider main container -->
+  <div class="swiper">
+
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <img src="./assets/image-slide-1.jpg" alt="abstract" class="img-slider">
+      </div>
+      <div class="swiper-slide">
+        <img src="./assets/image-slide-2.jpg" alt="geometry shapes" class="img-slider">
+      </div>
+      <div class="swiper-slide">
+        <img src="./assets/image-slide-3.jpg" alt="newspaper" class="img-slider">
+      </div>
+      <div class="swiper-slide">
+        <img src="./assets/image-slide-4.jpg" alt="vinyl records" class="img-slider">
+      </div>
+      <div class="swiper-slide">
+        <img src="./assets/image-slide-5.jpg" alt="iphone in hand" class="img-slider">
+      </div>
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 
 
-  <div class="arrows">
-    <img class="arrow-left" src="./assets/icon-arrow-left.svg" alt="arrow">
-    <img class="arrow-right" src="./assets/icon-arrow-right.svg" alt="arrow">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
   </div>
+
+<!--  <div class="arrows">-->
+<!--    <img class="arrow-left" src="./assets/icon-arrow-left.svg" alt="arrow">-->
+<!--    <img class="arrow-right" src="./assets/icon-arrow-right.svg" alt="arrow">-->
+<!--  </div>-->
+
+
 </div>
-
 
 
 <div class="container">
@@ -87,13 +112,11 @@
   </div>
 </div>
 
-
-
 <footer class="container navigation-and-footer-container">
   <img src="./assets/logo.svg" alt="logo" class="logo-img">
   <button class="button-black">Free Consultation</button>
 </footer>
 
-
 </body>
+
 </html>

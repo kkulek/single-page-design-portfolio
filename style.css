@@ -14,22 +14,20 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+
 body {
     background-color: var(--prime-light-cream);
 }
-
 
 .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
 .centered-copy {
     text-align: center;
 }
-
 
 .navigation-and-footer-container {
     flex-direction: row;
@@ -84,8 +82,6 @@ h1, h2 {
 p {
     color: var(--prime-medium-brown)
 }
-
-
 
 .service {
     color: white;
@@ -195,7 +191,6 @@ p {
     }
 
 }
-
 
 .black-call-to-action {
     background-color: black;
@@ -452,8 +447,8 @@ p {
 
 .my-work {
     margin: 40px 0;
-    height: 30vh;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
 }
 
 .my-work > h2 {
@@ -461,39 +456,11 @@ p {
     margin-bottom: 30px;
 }
 
-.slider {
-    width: 2865px;
-}
 
 .img-slider {
     margin: 0 15px;
 }
 
-
-
-
-
-
-
-
-
-
-.arrows {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 16px;
-}
-
-.arrow-left, .arrow-right {
-    border-radius: 50px;
-    background-color: black;
-    height: 16px;
-    width: 15px;
-    box-sizing: unset;
-    border: 25px solid black;
-    cursor: pointer;
-}
 
 .arrow-left:hover,
 .arrow-right:hover,
@@ -531,4 +498,61 @@ p {
 }
 
 
+.swiper {
+    width: 100%;
+    height: 100%;
 
+}
+
+.swiper-slide {
+    /*background-color: yellow;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.swiper-button-prev {
+    background-image: url("./assets/icon-arrow-left.svg");
+    color: transparent !important;
+    height: 16px !important;
+    width: 15px !important;
+    border-radius: 50px;
+    background-color: black;
+    box-sizing: unset;
+    border: 25px solid black;
+    cursor: pointer;
+}
+
+.swiper-button-next {
+    background-image: url("./assets/icon-arrow-right.svg");
+    color: transparent !important;
+
+    height: 16px !important;
+    width: 15px !important;
+    border-radius: 50px;
+    background-color: black;
+    box-sizing: unset;
+    border: 25px solid black;
+    cursor: pointer;
+}
+
+
+.arrows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+
+}
+
+.arrow-left, .arrow-right {
+    border-radius: 50px;
+    background-color: black;
+    height: 16px;
+    width: 15px;
+    box-sizing: unset;
+    border: 25px solid black;
+    cursor: pointer;
+}
